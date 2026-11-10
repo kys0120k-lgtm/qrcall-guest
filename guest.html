@@ -476,6 +476,8 @@ function main() {
   state.audioOnly = parsed.audioOnly;
   el('intro').textContent = state.audioOnly ? '음성통화에 초대받았습니다.' : '영상통화에 초대받았습니다.';
   if (state.audioOnly) {
+    document.title = '음성통화 참여';
+    document.querySelector('header').textContent = '음성통화';
     el('permNote').textContent = '참여를 누르면 브라우저가 마이크 허용을 묻습니다 (카메라는 쓰지 않습니다).';
   }
   if (state.local) {
